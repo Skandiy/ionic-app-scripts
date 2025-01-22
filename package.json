@@ -24,8 +24,8 @@
     "github-release": "node ./scripts/create-github-release.js",
     "lint": "tslint -c ./tslint.json --project ./tsconfig.json --type-check -t stylish",
     "nightly": "npm run build && node ./scripts/publish-nightly.js",
-    "sass": "sass ./src/dev-client/sass/ion-dev.scss --output ./bin/ --output-style compressed",
-    "sass-watch": "npm run sass && sass ./src/dev-client/sass/ion-dev.scss --watch --output ./bin/ --output-style compressed",
+    "sass": "sass ./src/dev-client/sass/ion-dev.scss:ion-dev.css ./bin/ --style=compressed",
+    "sass-watch": "npm run sass && sass ./src/dev-client/sass/ion-dev.scss:ion-dev.css --watch --style compressed",
     "test": "jest",
     "watch": "npm run clean && tsc --watch & npm run sass-watch"
   },
@@ -97,10 +97,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/ionic-app-scripts.git"
+    "url": "git+https://github.com/Skandiy/ionic-app-scripts.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/ionic-app-scripts/issues"
+    "url": "https://github.com/Skandiy/ionic-app-scripts/issues"
   },
   "config": {
     "commitizen": {
